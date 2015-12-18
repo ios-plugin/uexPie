@@ -192,11 +192,11 @@
             for (UIView *subView in self.pieChartArray) {
                 if (subView!=nil&&[subView isKindOfClass:[PCPieChart class]]) {
                     PCPieChart *subViewPieChart = (PCPieChart *)subView;
-                    for (UIView *subView in [subViewPieChart.superview subviews]) {
-                        if (subView!=nil&&[subView isKindOfClass:[UIImageView class]]) {
-                            [subView removeFromSuperview];
-                        }
-                    }
+//                    for (UIView *subView in [subViewPieChart.superview subviews]) {
+//                        if (subView!=nil&&[subView isKindOfClass:[UIImageView class]]) {
+//                            [subView removeFromSuperview];
+//                        }
+//                    }
                     [subViewPieChart removeFromSuperview];
                 }
             }
