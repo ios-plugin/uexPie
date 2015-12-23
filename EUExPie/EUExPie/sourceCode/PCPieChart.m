@@ -141,7 +141,7 @@
 #define QU_LENGTH  10
 -(UIImageView *)getLocalImage:(NSString *)name Rect:(CGRect)rect{
     UIImageView *perImageView = [[[UIImageView alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)] autorelease];
-    NSString *imageStr = [[NSBundle mainBundle] pathForResource:name ofType:@"png"];
+    NSString *imageStr = [[UEX_BUNDLE resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",name]];
     UIImage *image = [UIImage imageWithContentsOfFile:imageStr];
     [perImageView setImage:image];
     [self addSubview:perImageView];
@@ -323,7 +323,7 @@
                 //不规则矩形区域
                 CGRect titleFrame =CGRectMake(0, left_label_y,defaultSize.width-1,optimumSize.height);
                 //                //纹理图
-                UIImageView *imageView_01 = [self getLocalImage:@"uexPie/label-Mask01" Rect:CGRectMake(0, left_label_y, defaultSize.width, optimumSize.height+4+1)];
+                UIImageView *imageView_01 = [self getLocalImage:@"label-Mask01" Rect:CGRectMake(0, left_label_y, defaultSize.width, optimumSize.height+4+1)];
                 if (self.imageViewArray) {
                     [self.imageViewArray addObject:imageView_01];
                 }
@@ -357,7 +357,7 @@
                 titleFrame =CGRectMake(14, left_label_y+2,defaultSize.width,optimumSize.height+4);//字的frame
 				[titleText drawInRect:titleFrame withFont:self.percentageFont lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentLeft];
                 //三角纹理
-                UIImageView *imageView_02 = [self getLocalImage:@"uexPie/label-Mask02" Rect:CGRectMake(leftUpPoint.x+1, leftUpPoint.y, middlePoint.x-leftUpPoint.x, leftDownPoint.y-leftUpPoint.y)];
+                UIImageView *imageView_02 = [self getLocalImage:@"label-Mask02" Rect:CGRectMake(leftUpPoint.x+1, leftUpPoint.y, middlePoint.x-leftUpPoint.x, leftDownPoint.y-leftUpPoint.y)];
                 if (self.imageViewArray) {
                     [self.imageViewArray addObject:imageView_02];
                 }
@@ -503,7 +503,7 @@
                 float text_x = x*2 + diameter-defaultSize.width;
 				CGRect titleFrame = CGRectMake(text_x, right_label_y, defaultSize.width, optimumSize.height+4);
                 //纹理图
-               UIImageView *imageView_03 =[self getLocalImage:@"uexPie/label-Mask01R" Rect:CGRectMake(text_x, right_label_y, defaultSize.width, optimumSize.height+4)];
+               UIImageView *imageView_03 =[self getLocalImage:@"label-Mask01R" Rect:CGRectMake(text_x, right_label_y, defaultSize.width, optimumSize.height+4)];
                 if (self.imageViewArray) {
                     [self.imageViewArray addObject:imageView_03];
                 }
@@ -543,7 +543,7 @@
                 titleFrame = CGRectMake(text_x-10, right_label_y+1, defaultSize.width, optimumSize.height);
                 [titleText drawInRect:titleFrame withFont:self.percentageFont lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentRight];
                 //三角纹理
-                UIImageView *imageView_04 = [self getLocalImage:@"uexPie/label-Mask02R" Rect:CGRectMake(middlePoint.x+1, right_label_y, rightUpPoint.x-middlePoint.x, rightDownPoint.y-rightUpPoint.y)];
+                UIImageView *imageView_04 = [self getLocalImage:@"label-Mask02R" Rect:CGRectMake(middlePoint.x+1, right_label_y, rightUpPoint.x-middlePoint.x, rightDownPoint.y-rightUpPoint.y)];
                 if (self.imageViewArray) {
                     [self.imageViewArray addObject:imageView_04];
                 }
@@ -661,7 +661,7 @@
 		}
     }
     //背景
-    NSString *str = [[NSBundle mainBundle] pathForResource:@"uexPie/bingtu-Mask" ofType:@"png"];
+    NSString *str = [[NSBundle mainBundle] pathForResource:@"bingtu-Mask" ofType:@"png"];
     NSData *imageData = [NSData dataWithContentsOfFile:str];
     UIImage *image = [UIImage imageWithData:imageData];
 //    float scale = diameter>image.size.width?diameter:image.size.width;

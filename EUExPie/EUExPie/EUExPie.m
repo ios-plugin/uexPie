@@ -41,9 +41,9 @@
         }
         NSString *str = nil;
         if ([width floatValue]>=[height floatValue]) {
-            str = [[NSBundle mainBundle] pathForResource:@"uexPie/bg2" ofType:@"png"];
+            str = [[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"bg2.png"];
         }else{
-            str = [[NSBundle mainBundle] pathForResource:@"uexPie/bg1" ofType:@"png"];
+            str = [[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"bg1.png"];
         }
         NSData *imageData = [NSData dataWithContentsOfFile:str];
         UIImage *image = [UIImage imageWithData:imageData];
