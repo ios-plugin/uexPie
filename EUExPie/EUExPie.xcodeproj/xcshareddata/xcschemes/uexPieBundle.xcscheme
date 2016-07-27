@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42EE60CF1C2A9E4F007CFCB4"
-               BuildableName = "uexPieBundle.bundle"
+               BuildableName = "uexPie.bundle"
                BlueprintName = "uexPieBundle"
                ReferencedContainer = "container:EUExPie.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42EE60CF1C2A9E4F007CFCB4"
-            BuildableName = "uexPieBundle.bundle"
+            BuildableName = "uexPie.bundle"
             BlueprintName = "uexPieBundle"
             ReferencedContainer = "container:EUExPie.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42EE60CF1C2A9E4F007CFCB4"
-            BuildableName = "uexPieBundle.bundle"
+            BuildableName = "uexPie.bundle"
             BlueprintName = "uexPieBundle"
             ReferencedContainer = "container:EUExPie.xcodeproj">
          </BuildableReference>
